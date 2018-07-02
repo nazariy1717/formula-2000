@@ -1,0 +1,27 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.footer{
+  padding: 65px 0;
+  background: url(../img/action-asphalt-auto-210019.jpg) center no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+
+.copyright{
+  height: 65px;
+  line-height: 65px;
+  &__link{
+    display: inline-block;
+    color: var(--col-black);
+    font-family: Montserrat,sans-serif;;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    @include transition;
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+}

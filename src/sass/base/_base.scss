@@ -1,0 +1,158 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong{
+  font-weight: bold;
+}
+
+
+
+
+// text classes
+.text-right   { text-align: right;  }
+.text-center  { text-align: center; }
+.text-left    { text-align: left;   }
+
+
+
+.app-title{
+  position: relative;
+  display: block;
+  font-family: 'Russo One','Open Sans',sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--col-black);
+  &.--white{  color: #fff;  }
+  &.--red{  color: var(--col-primary);  }
+  &.--theme{
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      top: 16px;
+      width: 122px;
+      height: 1px;
+      background-color: var(--col-primary);
+    }
+    &:before{
+      left: calc(50% - 175px);
+      transform: translate(-50%);
+    }
+    &:after{
+      right: calc(50% - 175px);
+      transform: translate(50%);
+    }
+  }
+}
+
+.app-txt{
+  display: block;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 20px;
+  &.--white{
+    color: #fff;
+  }
+}
+
+// end of text classes
+
+.image{
+  display: block;
+  max-width: 100%;
+}
+
+.section{
+  position: relative;
+  z-index: 1;
+  &__overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    &.--theme-1{
+      background-color: rgba(0,0,0, .83);
+    }
+    &.--theme-2{
+      background-color: rgba(0,0,0, .83);
+    }
+  }
+  &__content{
+    position: relative;
+    z-index: 9;
+  }
+}
+
+
+.hidden{
+  visibility: hidden;
+  display: none;
+}
+
+.m-auto{
+  display: block;
+  margin: auto;
+}
+
+.mb-0 {   margin-bottom: 0;    }
+.mb-10{  margin-bottom: 10px;  }
+.mb-15{  margin-bottom: 15px;  }
+.mb-20{  margin-bottom: 20px;  }
+.mb-25{  margin-bottom: 25px;  }
+.mb-30{  margin-bottom: 30px;  }
+.mb-40{  margin-bottom: 40px;  }
+.mb-50{  margin-bottom: 50px;  }
+.mb-45{  margin-bottom: 45px;  }
+.mb-75{  margin-bottom: 75px;  }
+
+
+.display-table{
+  display: table;
+  height: 100%;
+  width: 100%;
+  &__cell{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+
+
+.tab-content {
+  display: none;
+  animation: fadeEffect .5s;
+  -webkit-animation: fadeEffect .5s;
+  &.active{
+    display: block;
+  }
+}
+
+
+
+.js-panel-head{
+  cursor: pointer;
+}
+.js-panel-content{
+  display: none;
+}
+
+.js-panel{
+  &.js-active{
+    .js-panel-content{
+      //display: block;
+    }
+  }
+}

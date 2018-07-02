@@ -1,0 +1,23 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.app-delivery{
+  padding: 75px 0 175px 0;
+  background: url(../img/courier-services.jpg) center no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__title{
+    margin-bottom: 90px;
+  }
+  &__content{
+    max-width: 920px;
+    margin: auto;
+  }
+}
+
+
+
+.app-cooperation{
+  margin-bottom: 90px;
+}

@@ -1,0 +1,86 @@
+
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  outline: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-overflow-scrolling: touch;
+  &__body{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+  }
+  &__content{
+    position: relative;
+    padding: 60px 100px 80px;
+    max-width: 570px;
+    margin: auto;
+    width: 100%;
+    background-color: #fff;
+    @media (max-width: $breakpoint-sm) {
+      padding: 30px 15px 45px;
+    }
+  }
+
+  &__title{
+    display: block;
+  }
+
+  &__close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 15px;
+    display: block;
+    cursor: pointer;
+    color: #a0a0a0;
+    backface-visibility: hidden;
+    @include transition;
+    &:hover{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+
+
+.login{
+  &__link{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-primary);
+  }
+  &__btn{
+    margin: auto auto 30px;
+  }
+  &__txt{
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-grey);
+  }
+}
+
+
+
+
+
+
+
+
