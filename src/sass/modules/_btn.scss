@@ -15,28 +15,29 @@
 }
 
 .btn-primary{
-  width: 170px;
+  width: 100%;
   padding: 0;
-  height: 40px;
-  border-radius: 4px;
+  height: 75px;
   background-color: var(--col-primary);
   cursor: pointer;
   text-align: center;
+  color: white;
+  font-family: Montserrat,sans-serif;;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 48px;
   text-transform: uppercase;
-  line-height: 40px;
-  font-family: 'Myriad Pro', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
   @include transition;
-  &.--black{
-    background-color: var(--col-black);
-  }
-  &.--grey{
-    background-color: var(--col-grey);
+  backface-visibility: hidden;
+  span{
+    display: block;
+    line-height: 75px;
+    @include transition;
   }
   &:hover{
-    box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
+    span{
+      transform: translateY(-75px);
+    }
   }
 }
 

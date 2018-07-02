@@ -12,9 +12,15 @@
   z-index: 99;
   background-color: #fff;
 
-
   &__row{
     height: 90px;
+    @media (max-width: $breakpoint-lg) {
+      height: 65px;
+    }
+  }
+
+  &__column{
+    padding:  0 15px;
   }
 
   &__logo{
@@ -26,22 +32,56 @@
     line-height: 48px;
     text-transform: uppercase;
   }
-  &__list{}
+
+
+  &__list{
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 65px;
+      padding: 15px 0;
+      background-color: #fff;
+    }
+  }
   &__item{
     display: inline-block;
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+      text-align: center;
+    }
     & + & {
       margin-left: 30px;
+      @media (max-width: $breakpoint-lg) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
   }
   &__link{
+    position: relative;
     display: inline-block;
     color: var(--col-black);
     font-family: 'Open Sans',sans-serif;
     font-size: 18px;
     font-weight: 600;
     @include transition;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      width: 0;
+      right: 0;
+      bottom: -8px;
+      background-color: var(--col-secondary);
+      @include transition;
+    }
     &:hover{
-
+      &:before{
+        width: 100%;
+      }
     }
   }
 }
@@ -58,11 +98,11 @@
   .hamburger {
     display: block;
     position: absolute;
-    top: 8px;
+    top: 0;
     right: 0;
     overflow: visible;
     margin: 0;
-    padding: 23px 15px;
+    padding: 15px;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
     -webkit-transition-duration: .15s;
@@ -75,10 +115,6 @@
     color: inherit;
     border: 0;
     background-color: transparent;
-    @media (max-width: $breakpoint-lg) {
-      top: 0;
-      padding: 15px;
-    }
     &, .hamburger__box {
       cursor: pointer;
       display: inline-block;
@@ -109,7 +145,7 @@
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
-        background-color: #fff;
+        background-color: var(--col-primary);
       }
       &:before, &:after {
         content: '';

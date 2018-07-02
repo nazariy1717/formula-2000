@@ -1,8 +1,7 @@
 let front = {
 
     hamburger: $('.hamburger'),
-    nav: $('.header-mobile'),
-    header_drop: $('.header-drop'),
+    nav: $('.header__list'),
 
     slider_options_default: {
         wrapAround: true,
@@ -16,7 +15,6 @@ let front = {
 
     init: function () {
         this.events();
-        this.headerScroll();
     },
 
     newSlider: function (selector, options) {
@@ -26,83 +24,30 @@ let front = {
     },
 
 
-    headerScroll: function(){
-        if( $(window).scrollTop() > 35){
-            $('.header').addClass('js-fixed');
-        } else {
-            $('.header').removeClass('js-fixed');
-        }
-    },
+
 
     toogleNav: function(){
         if (!this.hamburger.hasClass('is-active')) {
             this.hamburger.addClass("is-active");
-            this.nav.toggleClass('js-show');
-            $('.header').addClass('js-open');
+            this.nav.slideToggle();
         }
         else {
             this.hamburger.removeClass("is-active");
-            this.nav.toggleClass('js-show');
-        }
-    },
-
-    toggleHeaderDrop: function(){
-        if (!this.header_drop.hasClass('is-active')) {
-            this.header_drop.addClass("is-active");
-        }
-        else {
-            this.header_drop.removeClass("is-active");
-        }
-    },
-
-    togglePlaylistDrop: function(){
-        if (!$('.playlist-drop').hasClass('is-active')) {
-            $('.playlist-drop').addClass("is-active");
-        }
-        else {
-            $('.playlist-drop').removeClass("is-active");
+            this.nav.slideToggle();
         }
     },
 
 
-    openTab: function (element, tabName, parent) {
-        let i, tab_content, tab_links;
 
-        tab_content = $(element).closest(parent).find('.page-tabs__wrap').find('.tab-content');
-        for (i = 0; i < tab_content.length; i++) {
-            tab_content[i].style.display = "none";
-        }
 
-        tab_links = $(element).closest('.tabs-ul').find('.tab-links');
-
-        for (i = 0; i < tab_links.length; i++) {
-            tab_links[i].className = tab_links[i].className.replace(" active", "");
-        }
-
-        document.getElementById(tabName).style.display = "block";
-        $(element).addClass('active');
-    },
 
 
     events: function () {
         let self = this;
 
-        $(window).on('scroll',function(){
-            self.headerScroll();
-        });
-
         $(document).on('click', '.hamburger', function () {
             self.toogleNav();
         });
-
-        $(document).on('click', '.header-nav__link', function () {
-            console.log($(window).width());
-            if ($(window).width() + 16 < 991) {
-                $(this).toggleClass('js-link-active');
-            }
-        });
-
-
 
         $('.js-scrollLink').on('click', function (e) {
             e.preventDefault();

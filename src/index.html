@@ -17,34 +17,73 @@
 <header class="header">
     <div class="container">
         <div class="row m-row header__row align-middle align-justify">
-            <div class="column">
+            <div class="header__column">
                 <a href="/" class="header__logo">Формула 2000</a>
             </div>
-            <div class="column">
+            <div class="header__column">
                 <ul class="header__list">
                     <li class="header__item">
-                        <a href="/" class="header__link">Про нас</a>
+                        <a href="/" class="header__link js-scrollLink">Про нас</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link"> Групи товарів</a>
+                        <a href="/" class="header__link js-scrollLink"> Групи товарів</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">Доставка</a>
+                        <a href="#delivery" class="header__link js-scrollLink">Доставка</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">Відгуки</a>
+                        <a href="/" class="header__link js-scrollLink">Відгуки</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">Контакти</a>
+                        <a href="/" class="header__link js-scrollLink">Контакти</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <div class="hamburger">
+        <div class="hamburger__box">
+            <div class="hamburger__inner"></div>
+        </div>
+    </div>
 </header>
 
 
-<section class="section app-delivery">
+<div class="app-screen">
+    <div class="app-screen__carouse">
+        <div class="app-screen__cell display-table" style="background-image: url(img/automobile-automotive-car-159293.jpg);">
+            <div class="app-screen__cell-overlay"></div>
+            <div class="app-screen__cell-content display-table__cell text-center">
+                <h2 class="app-screen__title app-title --white ">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
+                <a class="btn btn-primary app-screen__btn m-auto modalTrigger">
+                    <span>підібрати деталі</span>
+                    <span>підібрати деталі</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="section app-about">
+    <div class="container">
+        <h2 class="app-ttitle text-center">лідер на ринку продажу автозапчастин</h2>
+        <div class="app-about__img-content">
+
+        </div>
+        <div class="app-about__txt-content">
+            <p class="app-txt text-center">Про компанію «Формула 2000» Заснована в 2000 році і зарекомендувала
+                себе як лідер на ринку продажу автозапчастин. Компанія пропонує широкий асортимент якісних
+                автозапчастин для легкових, вантажних автомобілів, мікроавтобусів, та техніки спеціального призначення
+                іноземного виробництва. Компетентні працівники компанії швидко та якісно нададуть вичерпну інформацію,
+                та професійно підберуть автозапчастини.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section app-delivery" id="delivery">
     <div class="section__overlay --theme-1"></div>
     <div class="section__content">
         <div class="container">
@@ -55,13 +94,14 @@
                     якісно надають послуги: по ремонту стартерів, генераторів, двигунів, ходової та діагностику електрообладнання автомобіля.
                 </p>
                 <p class="app-txt --white text-center">Якісні автозапчастини у Львові та доступні ціни пропонує інтернет-магазин «Формула 2000». Якщо ви фізично знаходитесь у Львові
-                    та маєте бажання завітати до нас за більш детальною консультацією –
+                    та маєте бажання завітати до нас за більш детальною консультацією – <br>
                     будемо раді бачити вас в нашому магазині за адресою: м.Львів, вул.Рудненська 14а/1. Детальне місцеположення на карті дивіться на
                     сторінці «Контакти».</p>
                 <p class="app-txt --white text-center">14-річний досвід, гнучка система знижок, налагоджені контакти з виробниками та постачальниками багатьох відомих марок
                     автомобілів дозволяє нам продавати гуртом та в роздріб автозапчастини за достойною ціною. Для постійних клієнтів та
-                    оптовиків діє гнучка система
-                    знижок. Телефонуйте, замовляйте або заходьте в наш магазин і ми допоможемо вам підібрати самі необхідні автозапчастини
+                    <br>
+                    оптовиків діє гнучка система <br>
+                    знижок. Телефонуйте, замовляйте або заходьте в наш магазин і ми допоможемо вам підібрати самі необхідні автозапчастини <br>
                     для вашого автомобіля швидко та якісно.</p>
             </div>
         </div>
@@ -73,8 +113,21 @@
 <section class="section app-cooperation">
     <div class="container">
         <div class="row m-row align-middle">
-            <div class="column col-lg-5"></div>
-            <div class="column col-lg-7">
+            <div class="column col-lg-5 col-md-7 col-xs-12">
+                <h2 class="app-title app-cooperation__title">Давайте почнемо працювати разом</h2>
+                <p class="app-cooperation__txt">Вас вітає інтернет-магазин «Формула 2000». На
+                    нашому сайті ви зможете знайти більше 2 000 000
+                    якісних автозапчастин з доставкою по усій Україні.
+                    Широкий вибір деталей та доступних марок автомобілів
+                    забезпечить усім необхідним як СТО, так і роздрібних
+                    покупців, котрі своїми силами планують ремонтувати
+                    власний автомобіль.</p>
+                <a href="" class="btn btn-primary app-cooperation__btn modalTrigger">
+                    <span>замовити</span>
+                    <span>замовити</span>
+                </a>
+            </div>
+            <div class="column col-lg-7 col-md-5 col-xs-12">
                 <img src="img/auto-automobiles-automotive-337909.jpg" alt="" class="image">
             </div>
         </div>

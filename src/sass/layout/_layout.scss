@@ -2,11 +2,44 @@
 @import "../tools/breakpoints";
 
 
+.app-screen{
+  position: relative;
+  padding-top: 90px;
+  height: 100vh;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 65px;
+  }
+
+  &__cell{
+    height: calc(100vh - 90px);
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    @media (max-width: $breakpoint-lg) {
+      height: calc(100vh - 65px);
+    }
+    &-overlay{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0, .53);
+    }
+    &-content{
+      position: relative;
+      z-index: 9;
+    }
+  }
+}
+
+
 .app-delivery{
-  padding: 75px 0 175px 0;
+  padding: 75px 0 140px 0;
   background: url(../img/courier-services.jpg) center no-repeat fixed;
   -webkit-background-size: cover;
   background-size: cover;
+  margin-bottom: 125px;
   &__title{
     margin-bottom: 90px;
   }
@@ -20,4 +53,27 @@
 
 .app-cooperation{
   margin-bottom: 90px;
+  &__title{
+    margin-bottom: 45px;
+  }
+  &__txt{
+    color: black;
+    font-family: Montserrat,sans-serif;;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 55px;
+    max-width: 415px;
+    @media (max-width: $breakpoint-md) {
+      max-width: 100%;
+      margin-bottom: 30px;
+
+    }
+  }
+  &__btn{
+    max-width: 245px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+  }
 }
