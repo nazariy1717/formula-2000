@@ -50,7 +50,21 @@ let front = {
             }, 500, 'swing');
         });
 
+        $(document).on('change', '#file', function (event) {
+            let self = $(this);
+            let file = event.target.files[0];
+            let translate_txt = self.parent().find('label').attr('data-translate');
 
+            let fileExtension = ['jpeg', 'png', 'jpg'];
+
+            if ($.inArray(self.val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+                self.parent().find('label').text(translate_txt + fileExtension.join(', '));
+                self.val('');
+                return false;
+            } else {
+                self.parent().find('label').text(file.name);
+            }
+        });
 
 
     }

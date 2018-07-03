@@ -182,7 +182,7 @@
             </div>
         </div>
 
-        <a href="" class="app-client__link modalTrigger">ЗАЛИШИТИ ВІДГУК</a>
+        <a data-modal="#reviews_modal" class="app-client__link modalTrigger">ЗАЛИШИТИ ВІДГУК</a>
     </div>
 </section>
 
@@ -294,7 +294,7 @@
 
 
 
-<div class="modal" id="reviews_modal" style="display: block">
+<div class="modal" id="reviews_modal">
     <div class="modal__body">
         <div class="modal__content reviews-modal">
             <span class="modal__close icon-close"></span>
@@ -303,41 +303,36 @@
             <form action="/" id="reviews_form">
                 <div class="row m-row">
                     <div class="column col-md-6 col-xs-12">
-                        <div class="form__group-25">
-                            <input type="text" name="name" class="form__input" placeholder="Ім’я">
-                        </div>
+                        <label for="file" class="form__label text-center" data-translate="Дозволені формати: ">Завантажити фото</label>
+                        <input type="file" name="file" id="file" class="hidden">
+                    </div>
+                    <div class="column col-md-6 col-xs-12">
                         <div class="form__group-25">
                             <input type="text" name="phone" class="form__input" placeholder="Телефон">
                         </div>
+                    </div>
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-25">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                        </div>
+                    </div>
+                    <div class="column col-md-6 col-xs-12">
                         <div class="form__group-25">
                             <input type="email" name="email" class="form__input" placeholder="E-mail">
                         </div>
                     </div>
-                    <div class="column col-md-6 col-xs-12">
-                        <div class="row m-row">
-                            <div class="column col-md-6 col-sm-6 col-xs-12">
-                                <div class="form__group-25">
-                                    <input type="text" name="model" class="form__input" placeholder="Марка авто">
-                                </div>
-                            </div>
-                            <div class="column col-md-6 col-sm-6 col-xs-12">
-                                <div class="form__group-25">
-                                    <input type="text" name="year" class="form__input" placeholder="Рік авто">
-                                </div>
-                            </div>
-                            <div class="column col-xs-12">
-                                <div class="form__group-25">
-                                    <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
-                                </div>
-                            </div>
-                            <div class="column col-xs-12">
-                                <button type="submit" class="btn btn-primary modal__btn">
-                                    <span>надіслати</span>
-                                    <span>надіслати</span>
-                                </button>
-                            </div>
+                    <div class="column col-xs-12">
+                        <div class="form__group-25">
+                            <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
                         </div>
                     </div>
+                    <div class="column col-xs-12">
+                        <button type="submit" class="btn btn-primary modal__btn">
+                            <span>надіслати</span>
+                            <span>надіслати</span>
+                        </button>
+                    </div>
+
                 </div>
             </form>
         </div>
