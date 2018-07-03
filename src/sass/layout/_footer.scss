@@ -9,6 +9,62 @@
   &__column{
     margin-bottom: 30px;
   }
+  &__title{
+    display: block;
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    display: block;
+    color: white;
+    line-height: 30px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__txt{
+    color: white;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    font-style: italic;
+    span{
+      display: block;
+    }
+  }
+  &__soc{
+    text-align: center;
+    li{
+      display: inline-block;
+      margin: 0 10px;
+      a{
+        color: #fff;
+        font-size: 24px;
+        @include transition;
+        &:hover{
+          color: var(--col-primary);
+        }
+      }
+    }
+  }
+  &__link{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    @include transition;
+    i{
+      font-size: 14px;
+    }
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
 }
 
 
