@@ -8,11 +8,9 @@
     <title>formula 2000</title>
     <meta name="description" content="">
 
-
     <link href="css/build.css" rel="stylesheet">
 </head>
 <body>
-
 
 <header class="header">
     <div class="container">
@@ -48,13 +46,12 @@
     </div>
 </header>
 
-
 <div class="app-screen">
-    <div class="app-screen__carouse">
+    <div class="app-screen__carousel">
         <div class="app-screen__cell display-table" style="background-image: url(img/automobile-automotive-car-159293.jpg);">
             <div class="app-screen__cell-overlay"></div>
-            <div class="app-screen__cell-content display-table__cell text-center">
-                <h2 class="app-screen__title app-title --white ">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
+            <div class="app-screen__cell-content display-table__cell">
+                <h2 class="app-screen__title">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
                 <a class="btn btn-primary app-screen__btn m-auto modalTrigger">
                     <span>підібрати деталі</span>
                     <span>підібрати деталі</span>
@@ -69,7 +66,6 @@
     <div class="container">
         <h2 class="app-ttitle text-center">лідер на ринку продажу автозапчастин</h2>
         <div class="app-about__img-content">
-
         </div>
         <div class="app-about__txt-content">
             <p class="app-txt text-center">Про компанію «Формула 2000» Заснована в 2000 році і зарекомендувала
@@ -78,7 +74,6 @@
                 іноземного виробництва. Компетентні працівники компанії швидко та якісно нададуть вичерпну інформацію,
                 та професійно підберуть автозапчастини.</p>
         </div>
-
     </div>
 </section>
 
@@ -87,7 +82,6 @@
     <div class="section__overlay --theme-1"></div>
     <div class="section__content">
         <div class="container">
-
             <h2 class="app-title --white --theme text-center app-delivery__title">доставка</h2>
             <div class="app-delivery__content">
                 <p class="app-txt --white text-center">Так обравши необхідні автозапчастини ви можете відремонтувати свій автомобіль на нашому СТО, де професійні досвідчені майстри
@@ -108,7 +102,36 @@
     </div>
 </section>
 
+<section class="section app-client">
+    <div class="container">
+        <h2 class="app-title --red text-center app-client__title">Наші задоволені клієнти</h2>
+        <div class="app-client__carousel">
+            <div class="app-client__cell">
+                <div class="client">
+                    <img src="img/client.jpg" alt="" class="client__img">
+                    <span class="client__title">Олег власник СТО</span>
+                    <p class="app-txt text-center">Якісні автозапчастини у Львові та доступні ціни пропонує Інтернет-магазин «Формула 2000». </p>
+                </div>
+            </div>
+            <div class="app-client__cell">
+                <div class="client">
+                    <img src="img/client.jpg" alt="" class="client__img">
+                    <span class="client__title">Олег власник СТО</span>
+                    <p class="app-txt text-center">Якісні автозапчастини у Львові та доступні ціни пропонує Інтернет-магазин «Формула 2000». </p>
+                </div>
+            </div>
+            <div class="app-client__cell">
+                <div class="client">
+                    <img src="img/client.jpg" alt="" class="client__img">
+                    <span class="client__title">Олег власник СТО</span>
+                    <p class="app-txt text-center">Якісні автозапчастини у Львові та доступні ціни пропонує Інтернет-магазин «Формула 2000». </p>
+                </div>
+            </div>
+        </div>
 
+        <a href="" class="app-client__link modalTrigger">ЗАЛИШИТИ ВІДГУК</a>
+    </div>
+</section>
 
 <section class="section app-cooperation">
     <div class="container">
@@ -122,7 +145,7 @@
                     забезпечить усім необхідним як СТО, так і роздрібних
                     покупців, котрі своїми силами планують ремонтувати
                     власний автомобіль.</p>
-                <a href="" class="btn btn-primary app-cooperation__btn modalTrigger">
+                <a data-modal="#order_modal" class="btn btn-primary app-cooperation__btn modalTrigger">
                     <span>замовити</span>
                     <span>замовити</span>
                 </a>
@@ -134,15 +157,80 @@
     </div>
 </section>
 
-
 <footer class="section footer">
     <div class="section__overlay --theme-1"></div>
     <div class="section__content">
-        <div class="container"></div>
+        <div class="container">
+            <div class="row m-row">
+
+                <div class="column col-lg-3 footer__column">
+                    <span class="footer__title"></span>
+                    <span class="footer__subtitle"></span>
+                    <p class="footer__txt">
+                        <span></span>
+                        <span></span>
+                    </p>
+                </div>
+
+                <div class="column col-lg-3 footer__column">
+                    <span class="footer__title"></span>
+                    <span class="footer__subtitle"></span>
+                    <p class="footer__txt">
+                        <span></span>
+                        <span></span>
+                    </p>
+                </div>
+
+                <div class="column col-lg-2 footer__column">
+                    <span class="footer__title"></span>
+                    <span class="footer__subtitle"></span>
+                    <p class="footer__txt">
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <span class="footer__subtitle"></span>
+                    <p class="footer__txt">
+                        <span></span>
+                        <span></span>
+                    </p>
+                </div>
+
+                <div class="column col-lg-4 footer__column">
+                    <span class="footer__title">Менеджери магазину:</span>
+                    <div class="row m-row">
+                        <div class="column col-lg-6">
+                            <span class="footer__subtitle">Іван</span>
+                            <p class="footer__txt">
+                                <span>тел.: +38 (032) 244-72-83</span>
+                                <span>моб. +38 (067) 676-69-11</span>
+                            </p>
+                            <span class="footer__subtitle">Володимир</span>
+                            <p class="footer__txt">
+                                <span>тел.: +38 (032) 245-87-27</span>
+                                <span>моб. +38 (067) 676-65-58</span>
+                            </p>
+                        </div>
+                        <div class="column col-lg-6">
+                            <span class="footer__subtitle">Андрій</span>
+                            <p class="footer__txt">
+                                <span>тел.: +38 (032) 244-72-84</span>
+                                <span>моб. +38 (067) 670-47-52</span>
+                            </p>
+                            <span class="footer__subtitle">Володимир</span>
+                            <p class="footer__txt">
+                                <span>тел.: +38 (032) 245-87-27</span>
+                                <span>моб. +38 (067) 676-65-58</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column col-lg-2 footer__column"></div>
+
+            </div>
+        </div>
     </div>
 </footer>
-
-
 
 <div class="copyright text-right">
     <div class="container">
@@ -154,23 +242,63 @@
 
 
 
+<div class="modal" id="order_modal" style="display: block">
+    <div class="modal__body">
+        <div class="modal__content order-modal">
+            <span class="modal__close icon-close"></span>
 
+            <span class="modal__title">Замовити автозапчастини</span>
 
+            <img src="img/001.jpg" alt="" class="order-modal__img">
+            <form action="/" id="login_form">
 
+                <div class="row m-row">
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-25">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                        </div>
+                        <div class="form__group-25">
+                            <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                        </div>
+                        <div class="form__group-25">
+                            <input type="email" name="email" class="form__input" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="row m-row">
+                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                <div class="form__group-25">
+                                    <input type="text" name="model" class="form__input" placeholder="Марка авто">
+                                </div>
+                            </div>
+                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                <div class="form__group-25">
+                                    <input type="text" name="year" class="form__input" placeholder="Рік авто">
+                                </div>
+                            </div>
+                            <div class="column col-xs-12">
+                                <div class="form__group-25">
+                                    <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
+                                </div>
+                            </div>
+                            <div class="column col-xs-12">
+                                <button type="submit" class="btn btn-primary modal__btn">
+                                    <span>надіслати</span>
+                                    <span>надіслати</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-lg-6"></div>
+                    <div class="column col-lg-6"></div>
+                    <div class="column col-lg-6"></div>
+                </div>
 
+            </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+    </div>
+</div>
 
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
@@ -178,6 +306,9 @@
 <script src="js/libs/jquery.validate.js"></script>
 <script src="js/libs/jquery.mask.min.js"></script>
 <script src="js/front.js"></script>
-
+<script type="text/javascript">
+    front.newSlider('.app-screen__carousel',{pageDots: true});
+    front.newSlider('.app-client__carousel');
+</script>
 </body>
 </html>

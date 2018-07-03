@@ -47,8 +47,9 @@
   height: 50px;
   cursor: pointer;
   border: 0;
-  font-size: 45px;
-  color: var(--col-black);
+  padding: 0;
+  font-size: 35px;
+  color: var(--col-primary);
   outline: none;
   background-color: transparent;
   -webkit-transform: translateY(-50%);
@@ -64,9 +65,9 @@
 }
 
 .flickity-prev-next-button.previous {
-  left: 0;
+  left: -5px;
   &:after{
-    content: "\e911";
+    content: "\e900";
     font-family: 'icomoon' !important;
   }
 }
@@ -75,7 +76,7 @@
 .flickity-prev-next-button.next {
   right: 0;
   &:after{
-    content: "\e912";
+    content: "\e901";
     font-family: 'icomoon' !important;
   }
 }
@@ -128,24 +129,13 @@
   transition: all 0.3s ease;
   .dot {
     position: relative;
-    width: 170px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     display: inline-block;
     cursor: pointer;
     background-color: #fff;
     @include transition;
-    &:hover{
-      background-color: var(--col-primary);
-    }
-    @media (max-width: $breakpoint-lg) {
-      width: 150px;
-    }
-    @media (max-width: $breakpoint-md) {
-      width: 90px;
-    }
-    @media (max-width: $breakpoint-sm) {
-      width: 45px;
-    }
   }
   .dot + .dot {
     margin-left: 30px;

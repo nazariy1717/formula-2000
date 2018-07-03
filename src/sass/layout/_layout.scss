@@ -31,23 +31,127 @@
       z-index: 9;
     }
   }
+
+  &__title{
+    text-align: center;
+    color: white;
+    font-family: 'Russo One',sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+  &__btn{
+    margin: auto;
+    max-width: 380px;
+  }
 }
+
+
+
+
 
 
 .app-delivery{
   padding: 75px 0 140px 0;
-  background: url(../img/courier-services.jpg) center no-repeat fixed;
+  background: url(../img/courier-services.jpg) center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  overflow: hidden;
   margin-bottom: 125px;
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 90px;
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: 75px 0;
+  }
   &__title{
     margin-bottom: 90px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 45px;
+    }
   }
   &__content{
     max-width: 920px;
     margin: auto;
+    @media (max-width: $breakpoint-lg) {
+      br{
+        display: none;
+      }
+    }
   }
 }
+
+
+.app-client{
+  margin-bottom: 125px;
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 90px;
+  }
+  &__title{
+    margin-bottom: 45px;
+  }
+  &__carousel{
+    padding: 0 30px;
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 0;
+    }
+  }
+  &__cell{
+    width: 50%;
+    padding: 60px 15px;
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+  }
+  &__link{
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 200px;
+    color: var(--col-primary);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.client{
+  position: relative;
+  margin: auto;
+  max-width: 465px;
+  height: 245px;
+  padding: 95px 45px 30px 45px;
+  background-color: white;
+  box-shadow: 0 1px 24px 3px rgba(0, 0, 0, 0.28);
+  @media (max-width: $breakpoint-lg) {
+    padding: 75px 30px 30px 30px;
+  }
+  &__img{
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  &__title{
+    display: block;
+    text-align: center;
+    color: var(--col-primary);
+    font-family: 'Russo One',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+  &__txt{}
+}
+
 
 
 
@@ -58,7 +162,7 @@
   }
   &__txt{
     color: black;
-    font-family: Montserrat,sans-serif;;
+    font-family: Montserrat,sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;

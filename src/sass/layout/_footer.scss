@@ -2,10 +2,13 @@
 @import "../tools/breakpoints";
 
 .footer{
-  padding: 65px 0;
-  background: url(../img/action-asphalt-auto-210019.jpg) center no-repeat fixed;
+  padding: 75px 0 55px 0;
+  background: url(../img/action-asphalt-auto-210019.jpg) center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  &__column{
+    margin-bottom: 30px;
+  }
 }
 
 
