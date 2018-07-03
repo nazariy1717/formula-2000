@@ -52,7 +52,27 @@
             <div class="app-screen__cell-overlay"></div>
             <div class="app-screen__cell-content display-table__cell">
                 <h2 class="app-screen__title">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
-                <a class="btn btn-primary app-screen__btn m-auto modalTrigger">
+                <a data-modal="#order_modal" class="btn btn-primary app-screen__btn m-auto modalTrigger">
+                    <span>підібрати деталі</span>
+                    <span>підібрати деталі</span>
+                </a>
+            </div>
+        </div>
+        <div class="app-screen__cell display-table" style="background-image: url(img/automobile-automotive-car-159293.jpg);">
+            <div class="app-screen__cell-overlay"></div>
+            <div class="app-screen__cell-content display-table__cell">
+                <h2 class="app-screen__title">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
+                <a data-modal="#order_modal" class="btn btn-primary app-screen__btn m-auto modalTrigger">
+                    <span>підібрати деталі</span>
+                    <span>підібрати деталі</span>
+                </a>
+            </div>
+        </div>
+        <div class="app-screen__cell display-table" style="background-image: url(img/automobile-automotive-car-159293.jpg);">
+            <div class="app-screen__cell-overlay"></div>
+            <div class="app-screen__cell-content display-table__cell">
+                <h2 class="app-screen__title">Якісні деталі до автомобілів у <br>широкому асортименті</h2>
+                <a data-modal="#order_modal" class="btn btn-primary app-screen__btn m-auto modalTrigger">
                     <span>підібрати деталі</span>
                     <span>підібрати деталі</span>
                 </a>
@@ -64,18 +84,51 @@
 
 <section class="section app-about">
     <div class="container">
-        <h2 class="app-ttitle text-center">лідер на ринку продажу автозапчастин</h2>
+        <h2 class="app-title text-center app-about__title">лідер на ринку продажу автозапчастин</h2>
         <div class="app-about__img-content">
+            <img src="img/02.png" alt="" class="image m-auto">
         </div>
         <div class="app-about__txt-content">
-            <p class="app-txt text-center">Про компанію «Формула 2000» Заснована в 2000 році і зарекомендувала
-                себе як лідер на ринку продажу автозапчастин. Компанія пропонує широкий асортимент якісних
-                автозапчастин для легкових, вантажних автомобілів, мікроавтобусів, та техніки спеціального призначення
-                іноземного виробництва. Компетентні працівники компанії швидко та якісно нададуть вичерпну інформацію,
+            <p class="app-txt text-center">Про компанію «Формула 2000» Заснована в 2000 році і зарекомендувала <br>
+                себе як лідер на ринку продажу автозапчастин. Компанія пропонує широкий асортимент якісних <br>
+                автозапчастин для легкових, вантажних автомобілів, мікроавтобусів, та техніки спеціального призначення <br>
+                іноземного виробництва. Компетентні працівники компанії швидко та якісно нададуть вичерпну інформацію, <br>
                 та професійно підберуть автозапчастини.</p>
+        </div>
+
+        <div class="row m-row align-center">
+            <div class="column col-lg-3 col-sm-4 col-xs-12">
+                <div class="about-item">
+                    <div class="about-item__count">20</div>
+                    <span class="about-item__title">Років досвіду</span>
+                </div>
+            </div>
+            <div class="column col-lg-3 col-sm-4 col-xs-12">
+                <div class="about-item">
+                    <div class="about-item__count">200</div>
+                    <span class="about-item__title">Працівників</span>
+                </div>
+            </div>
+            <div class="column col-lg-3 col-sm-4 col-xs-12">
+                <div class="about-item">
+                    <div class="about-item__count">500+</div>
+                    <span class="about-item__title">Задоволених клієнтів</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+
+
+<section class="section app-product">
+    <div class="container">
+        <h2 class="app-title --theme text-center app-product__title">Наші товари</h2>
+
+
+    </div>
+</section>
+
 
 
 <section class="section app-delivery" id="delivery">
@@ -241,17 +294,13 @@
 
 
 
-
-<div class="modal" id="order_modal" style="display: block">
+<div class="modal" id="reviews_modal" style="display: block">
     <div class="modal__body">
-        <div class="modal__content order-modal">
+        <div class="modal__content reviews-modal">
             <span class="modal__close icon-close"></span>
-
-            <span class="modal__title">Замовити автозапчастини</span>
-
-            <img src="img/001.jpg" alt="" class="order-modal__img">
-            <form action="/" id="login_form">
-
+            <span class="modal__title">Залишити відгук</span>
+            <img src="img/delivery-courier00.png" alt="" class="reviews-modal__img">
+            <form action="/" id="reviews_form">
                 <div class="row m-row">
                     <div class="column col-md-6 col-xs-12">
                         <div class="form__group-25">
@@ -289,13 +338,59 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column col-lg-6"></div>
-                    <div class="column col-lg-6"></div>
-                    <div class="column col-lg-6"></div>
                 </div>
-
             </form>
+        </div>
+    </div>
+</div>
 
+
+<div class="modal" id="order_modal">
+    <div class="modal__body">
+        <div class="modal__content order-modal">
+            <span class="modal__close icon-close"></span>
+            <span class="modal__title">Замовити автозапчастини</span>
+            <img src="img/001.jpg" alt="" class="order-modal__img">
+            <form action="/" id="order_form">
+                <div class="row m-row">
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-25">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                        </div>
+                        <div class="form__group-25">
+                            <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                        </div>
+                        <div class="form__group-25">
+                            <input type="email" name="email" class="form__input" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="row m-row">
+                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                <div class="form__group-25">
+                                    <input type="text" name="model" class="form__input" placeholder="Марка авто">
+                                </div>
+                            </div>
+                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                <div class="form__group-25">
+                                    <input type="text" name="year" class="form__input" placeholder="Рік авто">
+                                </div>
+                            </div>
+                            <div class="column col-xs-12">
+                                <div class="form__group-25">
+                                    <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
+                                </div>
+                            </div>
+                            <div class="column col-xs-12">
+                                <button type="submit" class="btn btn-primary modal__btn">
+                                    <span>надіслати</span>
+                                    <span>надіслати</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

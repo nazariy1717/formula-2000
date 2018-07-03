@@ -138,7 +138,7 @@
     @include transition;
   }
   .dot + .dot {
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .dot.is-selected {
     background-color: var(--col-primary)

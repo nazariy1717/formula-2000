@@ -6,10 +6,13 @@
   position: relative;
   padding-top: 90px;
   height: 100vh;
+  margin-bottom: 115px;
   @media (max-width: $breakpoint-lg) {
     padding-top: 65px;
   }
-
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 90px;
+  }
   &__cell{
     height: calc(100vh - 90px);
     background: center no-repeat;
@@ -39,18 +42,158 @@
     font-size: 30px;
     font-weight: 400;
     line-height: 48px;
+    padding: 0 45px;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+    }
   }
   &__btn{
+    position: relative;
     margin: auto;
     max-width: 380px;
+    @media (max-width: $breakpoint-sm) {
+      max-width: 300px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 30px;
+      right: 70px;
+      width: 23px;
+      height: 14px;
+      background: url(../img/arrow.png) center no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      @include transition;
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+    span{
+      padding-right: 20px;
+      @media (max-width: $breakpoint-sm) {
+        padding-right: 0;
+      }
+    }
+    &:hover{
+      &:after{
+        right: 50px;
+      }
+    }
+  }
+
+  .flickity-prev-next-button{
+    color: #fff;
+    font-size: 45px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 35px;
+    }
+  }
+  .flickity-prev-next-button.previous {
+    left: 70px;
+    @media (max-width: $breakpoint-lg) {
+      left: 10px;
+    }
+  }
+  .flickity-prev-next-button.next {
+    right: 85px;
+    @media (max-width: $breakpoint-lg) {
+      right: 15px;
+    }
   }
 }
 
 
+.app-about{
+  overflow: hidden;
+  margin-bottom: 100px;
+  &__title{
+    margin-bottom: 75px;
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 45px;
+    }
+  }
+  &__img-content{
+    position: relative;
+    margin-bottom: 45px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: -999%;
+      right: -999%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 1px;
+      opacity: 0.24;
+      background-color: black;
+    }
+    &:after{
+      content: '2000';
+      position: absolute;
+      left: 50%;
+      top: calc(50% - 10px);
+      transform: translate(-50%, -50%);
+      color: var(--col-secondary);
+      opacity: 0.9;
+      font-family: 'Russo One',sans-serif;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 84px;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 60px;
+      }
+    }
+  }
+  &__txt-content{
+    max-width: 780px;
+    margin: auto auto 90px;
+    @media (max-width: $breakpoint-lg) {
+      br{
+        display: none;
+      }
+    }
+    @media (max-width: $breakpoint-sm) {
+      margin: auto auto 45px;
+    }
+  }
+}
 
+.about-item{
+  margin: auto auto 30px;
+  &__count{
+    width: 115px;
+    height: 115px;
+    margin: auto auto 15px;
+    background: url(../img/about-item.png) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    line-height: 115px;
+    text-align: center;
+    color: var(--col-primary);
+    font-family: 'Russo One','Open Sans',sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
 
+  }
+  &__title{
+    display: block;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+}
 
+.app-product{
+  &__title{
+    margin-bottom: 60px;
+  }
+}
 
 .app-delivery{
   padding: 75px 0 140px 0;
