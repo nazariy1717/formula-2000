@@ -324,3 +324,48 @@
     }
   }
 }
+
+
+.page{
+  &__content{
+    padding: 100px;
+    padding-top: 90px;
+    height: 100vh;
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 65px;
+    }
+  }
+  &__wrap{
+    position: relative;
+  }
+
+  &__title{
+    color: var(--col-black);
+    font-family: "Open Sans",sans-serif;
+    font-size: 380px;
+    font-weight: 700;
+    line-height: 380px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    color: var(--col-black);
+    font-family: "Open Sans",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  &__img{
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+    max-width: 215px;
+  }
+  &__btn{
+    max-width: 400px;
+    margin: auto;
+  }
+}
