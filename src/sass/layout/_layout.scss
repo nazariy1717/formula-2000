@@ -190,10 +190,119 @@
 }
 
 .app-product{
+  overflow: hidden;
+  margin-bottom: 120px;
   &__title{
     margin-bottom: 60px;
   }
+  &__top-carousel{
+    margin-bottom: 45px;
+  }
+  &__top-cell{
+    width: 11.11111%;
+    img{
+      max-width: 60px;
+      @include transition;
+      filter: grayscale(1);
+    }
+    &.is-selected{
+      img{
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__carousel{
+    padding-bottom: 80px;
+  }
+  &__cell{
+    width: 100%;
+  }
+
+  .flickity-page-dots{
+    
+  }
+  .flickity-page-dots .dot{
+    background-color: var(--col-black);
+  }
+  .flickity-page-dots .dot.is-selected{
+    background-color: var(--col-primary);
+  }
 }
+
+.product-item{
+  margin-bottom: 35px;
+  &__img-wrap{
+    height: 200px;
+    position: relative;
+  }
+  &__image{
+    max-height: 100%;
+    max-width: 175px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
+  }
+  &__title{
+    display: block;
+    text-align: center;
+    color: black;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 10px;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 14px;
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    padding-right: 10px;
+    text-align: center;
+    color: #9c0202;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    @include transition;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 13px;
+    }
+    &:after{
+      content: "\e901";
+      font-family: 'icomoon' !important;
+      position: absolute;
+      transform: translateX(5px);
+      top: 1px;
+      font-size: 14px;
+      color: var(--col-primary);
+      @include transition;
+      @media (max-width: $breakpoint-sm) {
+        transform: translateX(0);
+      }
+    }
+    &:hover{
+     &:after{
+       transform: translateX(15px);
+       @media (max-width: $breakpoint-sm) {
+         transform: translateX(5px);
+       }
+     }
+    }
+  }
+}
+
+
 
 .app-delivery{
   padding: 75px 0 140px 0;
