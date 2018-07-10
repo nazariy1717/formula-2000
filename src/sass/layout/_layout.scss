@@ -205,7 +205,7 @@
       @include transition;
       filter: grayscale(1);
     }
-    &.is-selected{
+    &:hover{
       img{
         filter: grayscale(0);
       }
@@ -427,7 +427,17 @@
     }
   }
   &__btn{
-    max-width: 245px;
+    max-width: 200px;
+    height: 45px;
+    line-height: 45px;
+    span{
+      line-height: 45px;
+    }
+    &:hover{
+      span{
+        transform: translateY(-45px);
+      }
+    }
     @media (max-width: $breakpoint-md) {
       margin-bottom: 30px;
     }
