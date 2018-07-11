@@ -502,3 +502,24 @@
     margin: auto;
   }
 }
+
+
+.callback{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  border: 0;
+  outline: 0;
+  text-indent: -9999px;
+  background: url(../img/call.svg) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 445;
+  animation: uptocallphone 1s linear infinite;
+  @media (max-width: $breakpoint-sm) {
+    width: 45px;
+    height: 45px;
+  }
+}

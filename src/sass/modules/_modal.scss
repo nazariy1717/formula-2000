@@ -123,6 +123,41 @@
 }
 
 
+.callback-modal{
+  position: relative;
+  overflow: hidden;
+  padding: 105px 190px;
+  max-width: 800px;
+  @media (max-width: $breakpoint-lg) {
+    padding: 45px 205px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 45px
+  }
+  &__title{
+    display: block;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__subtitile{
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+  }
+  &__img{
+    position: absolute;
+    bottom: -40px;
+    left: -120px;
+    max-width: 325px;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
 
 
 
