@@ -445,6 +445,207 @@
 }
 
 
+
+
+.app-news{
+  margin-bottom: 100px;
+  &__title{
+    margin-bottom: 70px;
+  }
+}
+
+.news-item{
+  position: relative;
+  background: center no-repeat;
+  -webkit-background-size:  cover;
+  background-size:  cover;
+  margin-bottom: 20px;
+  &.--type-1{
+    height: 310px;
+    @media (max-width: $breakpoint-lg){
+      height: 245px;
+    }
+    @media (max-width: $breakpoint-md){
+      height: 200px;
+    }
+  }
+  &.--type-2{
+    height: 180px;
+    @media (max-width: $breakpoint-lg){
+      height: 245px;
+    }
+    @media (max-width: $breakpoint-md){
+      height: 200px;
+    }
+    .news-item__block{
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+    }
+    .news-item__title{
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+  }
+  &.--type-3{
+    height: 245px;
+    @media (max-width: $breakpoint-md){
+      height: 200px;
+    }
+    .news-item__block{
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+    }
+    .news-item__title{
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+
+    }
+  }
+  &__overlay{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.54);
+  }
+  &__content{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+  }
+  &__block{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  &__title{
+    display: block;
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 16px !important;
+      line-height: 24px!important;
+      margin-bottom: 10px!important;
+    }
+    @media (max-width: $breakpoint-md){
+      font-size: 14px !important;
+      line-height: 20px!important;
+      margin-bottom: 5px!important;
+    }
+  }
+  &__txt{
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    @include text-ellipsis(3);
+  }
+}
+
+.news{
+  overflow: hidden;
+  &__wrap{
+    padding: 145px 0 90px 0;
+  }
+  &__title{
+    display: block;
+    text-align: center;
+    color: #1f1d28;
+    font-family: 'Russo One',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 60px;
+  }
+
+  &__table{
+    padding-top: 60px;
+    margin-bottom: 60px;
+    @media (max-width: $breakpoint-lg){
+      padding-top: 45px;
+      margin-bottom: 45px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px 0;
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      @media (max-width: $breakpoint-lg){
+        table-layout: initial;
+      }
+    }
+    th,td{
+      min-width: 150px;
+      padding: 10px 15px;
+      color: #1f1d28;
+      font-family: "Open Sans",sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      span{
+        display: block;
+      }
+    }
+    table, th, td {
+      text-align: left;
+      border: 1px solid #E2E2E2;
+    }
+  }
+  &__txt-wrapper{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 120px;
+    -webkit-column-gap: 120px;
+    column-gap: 120px;
+    max-width: 1120px;
+    margin: auto;
+    @media (max-width: $breakpoint-xl){
+      -moz-column-gap: 90px;
+      -webkit-column-gap: 90px;
+    }
+    @media (max-width: $breakpoint-lg){
+      -moz-column-gap: 60px;
+      -webkit-column-gap: 60px;
+    }
+    @media (max-width: $breakpoint-md){
+      -moz-column-gap: 0;
+      -webkit-column-gap: 0;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+    }
+  }
+  &__txt{
+    color: #1f1d28;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 20px;
+
+  }
+}
+
+
+
+
 .page{
   &__content{
     padding: 100px 0;
